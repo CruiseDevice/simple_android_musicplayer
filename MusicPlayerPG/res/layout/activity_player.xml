@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- Player Header -->
+    <LinearLayout
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+ 
+        <!-- Song Title -->
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#04b3d2"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:text="The Good, The Bad And The Ugly"
+            android:layout_marginTop="10dp"/>
+ 
+        <!-- Playlist button -->
+        <ImageButton
+            android:id="@+id/btnPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/btn_playlist"
+            android:background="@null"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/songThumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@id/player_header_bg">
+        <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/adele"/>
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/player_footer_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+ 
+        <!-- Player Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+             <Button
+        android:id="@+id/btPrev"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+android:background="@drawable/btn_previous" />
+             
+             <Button
+        android:id="@+id/btFB"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btPrev"
+        android:background="@drawable/btn_backward" />
+             
+    <Button
+        android:id="@+id/btPlay"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btFB"
+        android:layout_alignBottom="@+id/btFB"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_pause" />
+      <Button
+        android:id="@+id/btFF"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btPlay"
+        android:layout_alignBottom="@+id/btPlay"
+        android:layout_toLeftOf="@+id/btNext"
+        android:background="@drawable/btn_forward" />
+
+    <Button
+        android:id="@+id/btNext"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btFF"
+        android:layout_alignBottom="@+id/btFF"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_next" />
+
+ </LinearLayout>
+    </LinearLayout>
+
+    
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/player_footer_bg"
+        android:layout_alignParentLeft="true" />
+    
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_above="@id/seekBar1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp">
+        <!-- Current Duration Label -->
+        <TextView
+            android:id="@+id/songCurrentDurationLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="#eeeeee"
+            android:textStyle="bold"/>
+        <!-- Total Duration Label -->
+        <TextView
+            android:id="@+id/songTotalDurationLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="#04cbde"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>
