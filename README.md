@@ -1,11 +1,8 @@
-# simple_android_musicplayer
+#musicplayer
+*MusicplayerPG*
 A simple music player in android.
 A basic Music Player Implemented using MediaPlayer class. Consists of simple functions like Fast Forward/Backward,Next,
 Previous,Songs List.
 
-Further Implementation:
-Want to add the playlist module.
-Shuffle and random playing of songs.
-Album Art
-Song title while playing song.
-Music Player Notification in notification bar.
+*Mymusicplayer*
+Attempt to create the advance version of *MusicPlayerPG*. The project was imported to Android Studio. Haven't worked on it for a while. Will come back when i get time.
